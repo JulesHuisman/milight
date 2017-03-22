@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+milight	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+on	KEYWORD2
+off	KEYWORD2
+brightness	KEYWORD2
+hue	KEYWORD2
+white	KEYWORD2
+flash	KEYWORD2
+keepAlive	KEYWORD2
+scene	KEYWORD2

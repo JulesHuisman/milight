@@ -5,20 +5,20 @@
 
 #include "Arduino.h"
 #include "milight.h"
+#include <WiFiUDP.h>
 
 milight::milight()
 {
   // Constructor
 }
 
-void milight::begin(WiFiUDP _Udp, int _UdpPort, IPAddress _milightIp, uint16_t _milightPort)
+void milight::begin(IPAddress _milightIp, uint16_t _milightPort)
 {
-  Udp = _Udp;
-  UdpPort = _UdpPort;
+  WiFiUDP Udp;
   milightIp = _milightIp;
   milightPort = _milightPort;
 
-  Udp.begin(UdpPort);
+  Udp.begin(55057);
   this->getSession();
 }
 

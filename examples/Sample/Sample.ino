@@ -1,5 +1,4 @@
 #include <ESP8266WiFi.h>
-#include <WiFiUDP.h>
 #include <milight.h>
 
 WiFiUDP Udp;
@@ -26,7 +25,7 @@ void setup()
   Serial.println(" connected");
   Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), UdpPort);
 
-  Milight.begin(Udp, UdpPort, milightIp, milightPort);
+  Milight.begin(milightIp, milightPort);
 }
 
 void loop()

@@ -26,7 +26,7 @@ class milight
 {
   public:
     milight();
-    void begin(WiFiUDP _Udp, int _UdpPort, IPAddress _milightIp, uint16_t _milightPort);
+    void begin(IPAddress _milightIp, uint16_t _milightPort);
     void on(int group, int repeat);
     void off(int group, int repeat);
     void brightness(int brightness, int group, int repeat);

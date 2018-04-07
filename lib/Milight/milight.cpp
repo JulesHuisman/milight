@@ -79,11 +79,6 @@ void milight::send(uint8_t command[], int group)
 
         delay(10);
     }
-
-  // Clear the command array
-  for (int i = 0; i < 9; i++) {
-    command[i] = 0x00;
-  }
 }
 
 // Turn on the lights

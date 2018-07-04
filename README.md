@@ -52,9 +52,9 @@ Call this function to set the saturation of a group
 
 ### Milight.white(group)
 Call this function to set a group to white
-| Parameter | Type | Value
-|---|---|---|
-| group | int | The group you would like to set to white (0 for all lights) |
+Parameter | Type | Value
+--- | --- | ---
+group | int | The group you would like to set to white (0 for all lights)
 
 
 ### Milight.keepAlive()

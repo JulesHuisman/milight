@@ -65,4 +65,4 @@ group | `int` | The group you would like to set to white (0 for all lights)
 
 
 ### Milight.keepAlive()
-Call this function every 5 seconds to keep the connection to the hub alive
+Call this function in your loop to keep the connection to the hub alive

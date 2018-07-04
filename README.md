@@ -7,7 +7,7 @@ A library to control your Milight lights using an esp8266 or esp32
 
 ### Milight.begin(ip, port)
 Call this function to connect to your milight hub
-| Parameter | Type | Value
+| Parameter | Type | Value |
 | --- | --- | --- |
 | ip | IPAddress | The ip address of your milight hub |
 | port | int | The port of your milight hub (5987 default for v6 hub) |

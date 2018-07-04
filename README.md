@@ -59,3 +59,8 @@ Call this function to set a group to white
 
 ### Milight.keepAlive()
 Call this function every 5 seconds to keep the connection to the hub alive
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3

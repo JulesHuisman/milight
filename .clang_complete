@@ -2,13 +2,8 @@
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\tools\sdk\lwip\include
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\cores\esp8266
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\variants\d1_mini
--IE:\GitHub\Milight\lib\ArduinoJson
--IE:\GitHub\Milight\lib\Milight
--IE:\GitHub\Milight\lib\arduinoWebSockets\src
+-IE:\GitHub\Milight\.piolibdeps\aREST
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\ESP8266WiFi\src
--IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\Hash\src
--IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\SPI
--IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\Ethernet\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\ArduinoOTA
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\DNSServer\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\EEPROM
@@ -20,8 +15,11 @@
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\ESP8266WiFiMesh\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\ESP8266httpUpdate\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\ESP8266mDNS
+-IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\Ethernet\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\GDBStub\src
+-IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\Hash\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\SD\src
+-IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\SPI
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\Servo\src
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\SoftwareSerial
 -IC:\Users\Jules Huisman\.platformio\packages\framework-arduinoespressif8266\libraries\TFT_Touch_Shield_V2

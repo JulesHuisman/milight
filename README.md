@@ -34,8 +34,8 @@ Call this function to set the brightness of a group
 
 | Parameter | Type | Value
 |---|---|---|
-| brightness | int | The brightness amount (0 - 100) |
-| group | int | The group you would like to change (0 for all lights) |
+| `brightness` | `int` | The brightness amount (0 - 100) |
+| `group` | `int` | The group you would like to change (0 for all lights) |
 
 
 ### Milight.hue(hue, group)

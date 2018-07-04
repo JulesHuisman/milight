@@ -4,6 +4,7 @@
 */
 
 #include "milight.h"
+#include <ESP8266WiFi.h>
 #include <Arduino.h>
 
 milight::milight()
@@ -24,6 +25,7 @@ void milight::begin(IPAddress _milightIp, uint16_t _milightPort)
 // Get a session from the milight hub by sending a default byte array
 void milight::getSession()
 {
+    Serial.println("Getting session");
   uint8_t sessionArray[] = {0x20, 0x00, 0x00, 0x00, 0x16, 0x02, 0x62, 0x3a, 0xd5, 0xed, 0xa3, 0x01, 0xae, 0x08, 0x2d, 0x46, 0x61, 0x41, 0xa7, 0xf6, 0xdc, 0xaf, 0xd3, 0xe6, 0x00, 0x00, 0x1e};
 
   Udp.beginPacket(milightIp, milightPort);
@@ -36,9 +38,11 @@ void milight::getSession()
 
   while (!sessionReceived)
   {
+      Serial.print(".");
     int sessionPacket = Udp.parsePacket();
     if (sessionPacket)
     {
+        Serial.println("Session received");
       int UDPbuffer = Udp.read(incomingPacket, 255);
       ID1 = incomingPacket[19];
       ID2 = incomingPacket[20];

@@ -4,8 +4,8 @@
 WiFiUDP Udp;
 milight Milight;
 
-const char* ssid = "Jules Wireless";
-const char* password = "kartoffelsalat";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 unsigned int UdpPort = 55057;
 
 IPAddress milightIp(192, 168, 0, 110);

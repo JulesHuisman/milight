@@ -3,16 +3,23 @@
   Created by Jules Huisman, March 19, 2017.
 */
 
-#ifndef milight_h
-#define milight_h
+#ifndef Milight_h
+#define Milight_h
 
+#include <ESP8266WiFi.h>
 #include <WiFiUDP.h>
+#include "Queue/Queue.h"
 
-class milight
+class Milight
 {
   public:
-    milight();
-    void begin(IPAddress _milightIp, uint16_t _milightPort);
+    inline Milight() {};
+    void begin(char* _ssid, char* _password);
+    void setCommandInterval(int interval);
+    void setBrightnessCurve(int curve);
+    void discover();
+    void connect();
+    void run();
     void on(int group);
     void off(int group);
     void brightness(int brightness, int group);
@@ -23,21 +30,23 @@ class milight
 
   private:
     void getSession();
-    void send(uint8_t command[], int group);
+    uint8_t* createCommand(uint8_t command[], int group);
+    float fscale(float originalMin, float originalMax, float newBegin, float newEnd, float inputValue, float curve);
     WiFiUDP Udp;
     IPAddress milightIp;
-    int UdpPort;
     int milightPort;
+    Queue queue;
     int ID1;
     int ID2;
     int SN;
+    int brightnessCurve = 1.5;
     char incomingPacket[255];
     const unsigned long sessionResetTime = 600000;
     const unsigned long keepAliveResetTime = 5000;
+    unsigned long commandSendInterval = 20;
     unsigned long keepAliveTime;
     unsigned long sessionTime;
-    uint8_t command[9];
-    uint8_t commandArray[22] = {0x80, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    unsigned long commandSendTime;
 };
 
 #endif

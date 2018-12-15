@@ -136,7 +136,7 @@ void Milight::connect() {
 }
 
 void Milight::run() {
-    keepAlive();
+    // keepAlive();
 
     if (!queue.isEmpty() && (millis() - commandSendTime) > commandSendInterval) {
         uint8_t* command = queue.get();
@@ -256,19 +256,19 @@ void Milight::white(int group)
 //Sends a keep alive message every 5 seconds
 void Milight::keepAlive()
 {
-    if (millis() - keepAliveTime > keepAliveResetTime) {
+    // if (millis() - keepAliveTime > keepAliveResetTime) {
 
-        DEBUG_PRINT_LN("Keep alive");
+    //     DEBUG_PRINT_LN("Keep alive");
 
-        commandArray[5]  = ID1;
-        commandArray[6]  = ID2;
+    //     commandArray[5]  = ID1;
+    //     commandArray[6]  = ID2;
 
-        Udp.beginPacket(milightIp, milightPort);
-        Udp.write(commandArray, 7);
-        Udp.endPacket();
+    //     Udp.beginPacket(milightIp, milightPort);
+    //     Udp.write(commandArray, 7);
+    //     Udp.endPacket();
 
-        keepAliveTime = millis();
-    }
+    //     keepAliveTime = millis();
+    // }
 }
 
 float Milight::fscale(float originalMin, float originalMax, float newBegin, float newEnd, float inputValue, float curve){

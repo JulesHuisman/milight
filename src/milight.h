@@ -6,8 +6,15 @@
 #ifndef Milight_h
 #define Milight_h
 
-#include <ESP8266WiFi.h>
-#include <WiFiUDP.h>
+#ifdef ESP32
+  #include <WiFi.h>
+  #include <WiFiUDP.h>
+#else ESP8266
+  #include <ESP8266WiFi.h>
+  #include <WiFiUDP.h>
+#endif
+
+
 #include "Queue/Queue.h"
 
 class Milight
